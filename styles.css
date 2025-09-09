@@ -44,8 +44,15 @@ section {
 }
 
 .package {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.package img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 form {
