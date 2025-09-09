@@ -12,7 +12,7 @@ html {
   font-size: 0.95em;
 }
 
-/* Navigation */
+/* Navigation Bar with Dropdowns */
 nav {
   background-color: #FFD700;
   position: sticky;
@@ -26,10 +26,12 @@ nav ul {
   padding: 12px;
   margin: 0;
   list-style: none;
+  position: relative;
 }
 
 nav ul li {
   margin: 0 20px;
+  position: relative;
 }
 
 nav ul li a {
@@ -41,6 +43,32 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #B22222;
+}
+
+/* Dropdown Menu */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1001;
+  min-width: 150px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  margin: 10px 0;
+}
+
+nav ul li ul li a {
+  color: #228B22;
+  font-weight: normal;
 }
 
 /* Hero Banner */
@@ -78,11 +106,31 @@ nav ul li a:hover {
   border-radius: 6px;
 }
 
-/* Search Section */
+/* Search Section with Overlay */
 .search-section {
+  position: relative;
   background-color: #f0fff0;
   padding: 40px 20px;
   text-align: center;
+  overflow: hidden;
+}
+
+.search-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34,139,34,0.6); /* jungle green overlay */
+  z-index: 0;
+}
+
+.search-section h2,
+.search-form {
+  position: relative;
+  z-index: 1;
+  color: #fff;
 }
 
 .search-form select,
@@ -91,6 +139,7 @@ nav ul li a:hover {
   margin: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  width: 200px;
 }
 
 .search-form button {
@@ -100,7 +149,7 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Package Grid (3 per row) */
+/* Package Grid Layout */
 .package-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -129,6 +178,9 @@ nav ul li a:hover {
 
 .package img {
   width: 100%;
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -143,23 +195,86 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-/* Partners Section */
-.partners {
-  background-color: #fff8dc;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.logo-row {
-  display: flex;
-  justify-content: center;
+/* Third Row Layout: 1 Package + Booking Form */
+.row-three {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 30px;
-  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.logo-row img {
-  height: 60px;
-  object-fit: contain;
+@media (max-width: 768px) {
+  .row-three {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Booking Form Styling */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+form h3 {
+  margin-top: 20px;
+  color: #228B22;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #FFD700;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #FFA500;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #fff8dc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonial {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  background-color: #fff;
+  border-left: 6px solid #228B22;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.testimonial h4 {
+  color: #B22222;
+  font-weight: normal;
 }
 
 /* Contact Section */
