@@ -1,7 +1,12 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Top Contact Bar */
 .top-bar {
-  background-color: #228B22;
-  color: #fff;
+  background-color: #FFD700;
+  color: #000;
   text-align: center;
   padding: 8px;
   font-size: 0.95em;
@@ -95,12 +100,18 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* Package Grid */
+/* Package Grid (3 per row) */
 .package-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .package {
@@ -132,7 +143,7 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-/* Partners */
+/* Partners Section */
 .partners {
   background-color: #fff8dc;
   text-align: center;
@@ -151,6 +162,19 @@ nav ul li a:hover {
   object-fit: contain;
 }
 
+/* Contact Section */
+#contact {
+  background-color: #228B22;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
 /* Footer */
 footer {
   background-color: #228B22;
@@ -159,4 +183,3 @@ footer {
   padding: 30px 20px;
   font-size: 0.9em;
 }
-```
