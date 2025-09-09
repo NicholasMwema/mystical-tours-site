@@ -13,14 +13,33 @@
     <p>📞 0738 556600 | ✉ mysticaltours14@gmail.com</p>
   </div>
 
-  <!-- Navigation Menu -->
+  <!-- Navigation Menu with Dropdowns -->
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#kenya">Kenya Holidays</a></li>
-      <li><a href="#international">International</a></li>
-      <li><a href="#packages">Tours & Safaris</a></li>
-      <li><a href="#about">About Us</a></li>
+      <li><a href="#">Home</a>
+        <ul>
+          <li><a href="#packages">Safari Packages</a></li>
+          <li><a href="#booking">Booking</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Kenya Holidays</a>
+        <ul>
+          <li><a href="#">Masai Mara</a></li>
+          <li><a href="#">Amboseli</a></li>
+        </ul>
+      </li>
+      <li><a href="#">International</a>
+        <ul>
+          <li><a href="#">Dubai</a></li>
+          <li><a href="#">Thailand</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About Us</a>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Our Story</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -37,84 +56,147 @@
   <section class="search-section">
     <h2>Find Your Perfect Safari</h2>
     <form class="search-form">
-      <select><option>Destination</option></select>
-      <select><option>Activity Type</option></select>
-      <select><option>Budget</option></select>
-      <select><option>Duration</option></select>
+      <select>
+        <option>Destination</option>
+        <option>Masai Mara</option>
+        <option>Amboseli</option>
+        <option>Dubai</option>
+        <option>Arusha</option>
+      </select>
+      <select>
+        <option>Activity Type</option>
+        <option>Game Drive</option>
+        <option>Cultural Tour</option>
+        <option>Beach Holiday</option>
+      </select>
+      <select>
+        <option>Budget</option>
+        <option>Under $500</option>
+        <option>$500–$1000</option>
+        <option>Above $1000</option>
+      </select>
+      <select>
+        <option>Duration</option>
+        <option>1–2 Days</option>
+        <option>3–5 Days</option>
+        <option>7+ Days</option>
+      </select>
       <button type="submit">Search</button>
     </form>
   </section>
 
-  <!-- Featured Packages -->
+  <!-- Safari Packages -->
   <section id="packages">
     <h2>Featured Safari Packages</h2>
 
+    <!-- Row 1 -->
     <div class="package-grid">
       <div class="package">
-        <img src="AMBOSELITOURPACKAGE.png" alt="Amboseli" />
+        <img src="amboselitourpackage.png" alt="Amboseli" />
         <h3>Amboseli Safari</h3>
         <p>2 Days, 1 Night. Game drives, nature walks, and Maasai village visit.</p>
       </div>
 
       <div class="package">
-        <img src="ARUSHATOURPACKAGE.png" alt="Arusha" />
+        <img src="arushatourpackage.png" alt="Arusha" />
         <h3>Arusha Cultural Trip</h3>
         <p>Explore Maasai Market, art galleries, and cultural heritage.</p>
       </div>
 
       <div class="package">
-        <img src="DUBAITOURPACKAGE.png" alt="Dubai" />
+        <img src="dubaitourpackage.png" alt="Dubai" />
         <h3>Dubai City Tour</h3>
         <p>Burj Khalifa, Desert Safari, Dhow Cruise, and luxury shopping.</p>
       </div>
+    </div>
 
+    <!-- Row 2 -->
+    <div class="package-grid">
       <div class="package">
-        <img src="MASAIMARATOURPACKAGE.png" alt="Masai Mara" />
+        <img src="masaimaratourpackage.png" alt="Masai Mara" />
         <h3>Masai Mara Migration</h3>
         <p>Witness the Great Migration and enjoy thrilling game drives.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Recommended Gems -->
-  <section class="recommended">
-    <h2>Big 5 Gems | Recommended</h2>
-    <div class="package-grid">
       <div class="package">
-        <img src="SGRTOURPACKAGE.png" alt="SGR Mombasa" />
+        <img src="sgrtourpackage.png" alt="SGR Mombasa" />
         <h3>SGR Mombasa Getaway</h3>
         <p>3 Days, 2 Nights. Train travel, beach hotels, and coastal culture.</p>
       </div>
 
       <div class="package">
-        <img src="TANZANIAOVERLANDTOURPACKAGE.png" alt="Tanzania Overland" />
+        <img src="tanzaniaoverlandtourpackage.png" alt="Tanzania Overland" />
         <h3>Tanzania Overland Safari</h3>
         <p>Truck-based adventure with scenic camping and cultural stops.</p>
       </div>
+    </div>
 
+    <!-- Row 3: 1 Package + Booking Form -->
+    <div class="row-three">
       <div class="package">
-        <img src="HALFDAYNAIROBITOURPACKAGE.png" alt="Nairobi City Tour" />
+        <img src="halfdaynairobitourpackage.png" alt="Nairobi City Tour" />
         <h3>Half Day Nairobi Tour</h3>
         <p>Visit Nairobi National Park, Giraffe Centre, and Karen Blixen Museum.</p>
       </div>
+
+      <form id="booking">
+        <h3>Book Your Adventure</h3>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="text" placeholder="Nationality" />
+        <select>
+          <option>Select Destination</option>
+          <option>Masai Mara</option>
+          <option>Amboseli</option>
+          <option>Dubai</option>
+          <option>Arusha</option>
+        </select>
+        <input type="date" placeholder="Departure Date" />
+        <input type="date" placeholder="Return Date" />
+        <textarea placeholder="Special Requests (Dietary needs, accessibility, etc.)"></textarea>
+        <select>
+          <option>Select Payment Method</option>
+          <option>Mpesa</option>
+          <option>Bank Transfer</option>
+          <option>Cash</option>
+        </select>
+        <label><input type="checkbox" required /> I agree to the terms and conditions</label>
+        <button type="submit">Book Now</button>
+      </form>
     </div>
   </section>
 
-  <!-- Partner Logos -->
-  <section class="partners">
-    <h2>Our Trusted Partners</h2>
-    <div class="logo-row">
-      <img src="kato-logo.png" alt="KATO" />
-      <img src="tripadvisor-logo.png" alt="TripAdvisor" />
-      <img src="taa-logo.png" alt="TAA" />
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Travelers Say</h2>
+
+    <div class="testimonial">
+      <p>“We visited the Masai Mara Game Reserve as a family in August 2020 and the experience was awesome. We had an amazing safari with Mystical Tours. Highly recommended!”</p>
+      <h4>— africansoil_safaris, Nairobi</h4>
     </div>
+
+    <div class="testimonial">
+      <p>“Excellent day in Nairobi! The private day tour to Nairobi National Park was the most wonderful experience. My friends and I had so much fun. Looking forward to more trips with Mystical Tours.”</p>
+      <h4>— lembi1234, Karen</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>“3 days in Masai Mara with Mystical Tours. We saw lions, cheetahs, elephants… everything! The guides were knowledgeable and friendly. Would definitely recommend.”</p>
+      <h4>— S4772TWpauln</h4>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> NHIF Nairobi, Nairobi, Kenya, 00100</p>
+    <p><strong>Mobile:</strong> 0738 556600</p>
+    <p><strong>Email:</strong> mysticaltours14@gmail.com</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p><strong>Address:</strong> NHIF Nairobi, Nairobi, Kenya, 00100</p>
-    <p><strong>Mobile:</strong> 0738 556600</p>
-    <p><strong>Email:</strong> mysticaltours14@gmail.com</p>
     <p>&copy; 2025 Mystical Tours and Travel. All rights reserved.</p>
   </footer>
 
